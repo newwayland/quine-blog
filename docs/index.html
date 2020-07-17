@@ -52,6 +52,9 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 
 <!--~~ Raw markup ~~-->
 
+<!-- Enter the title of your tiddlywiki and the path to the atom and rss xml files below -->
+<link rel="alternate" type="application/atom+xml" title="TW5 Tribal Knowledge Atom Feed" href="https://techlifeweb.com/tiddlywiki/atom.xml"/>
+<link rel="alternate" type="application/rss+xml" title="TW5 Tribal Knowledge RSS Feed" href="https://techlifeweb.com/tiddlywiki/rss.xml"/>
 
 
 </head>
@@ -153,6 +156,8 @@ Error message and password prompt
 
 <li>$:/DefaultTiddlers</li>
 
+<li>$:/discoverfeed</li>
+
 <li>$:/GitHub/Filename</li>
 
 <li>$:/GitHub/Path</li>
@@ -227,6 +232,8 @@ Error message and password prompt
 
 <li>Another Fixed Exchange Rate Inconsistency?</li>
 
+<li>Atom Feed</li>
+
 <li>bankers</li>
 
 <li>Bonds Pay For Themselves</li>
@@ -264,6 +271,8 @@ Error message and password prompt
 <li>reverse repo</li>
 
 <li>Robin Hood - MMT Edition</li>
+
+<li>RSS Feed</li>
 
 <li>Time to Retire Roger</li>
 
@@ -9675,6 +9684,12 @@ Error message and password prompt
 <div created="20200628072234707" creator="NeilW" modified="20200706071238615" modifier="NeilW" title="$:/DefaultTiddlers">
 <pre>[tag[blog]sort[created]order[reverse]]</pre>
 </div>
+<div atomfile="https://new-wayland.com/blog/atom.xml" created="20200717202839097" creator="NeilW" modified="20200717203118267" modifier="NeilW" rssfile="https://new-wayland.com/blog/rss.xml" serverdomain="https://new-wayland.com/blog/index.html" tags="$:/tags/RawMarkup" title="$:/discoverfeed" type="text/vnd.tiddlywiki">
+<pre>&lt;!-- Enter the title of your tiddlywiki and the path to the atom and rss xml files below --&gt;
+&lt;link rel=&quot;alternate&quot; type=&quot;application/atom+xml&quot; title=&quot;TW5 Tribal Knowledge Atom Feed&quot; href=&quot;https://techlifeweb.com/tiddlywiki/atom.xml&quot;/&gt;
+&lt;link rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot; title=&quot;TW5 Tribal Knowledge RSS Feed&quot; href=&quot;https://techlifeweb.com/tiddlywiki/rss.xml&quot;/&gt;
+</pre>
+</div>
 <div created="20200628071800258" modified="20200628071802079" title="$:/GitHub/Filename">
 <pre>index.html</pre>
 </div>
@@ -9920,7 +9935,7 @@ Error message and password prompt
 <div created="20200628074502360" creator="NeilW" modified="20200628074538729" modifier="NeilW" title="$:/state/plugin-info-1948905898-$:/plugins/tiddlywiki/blog---1120066432">
 <pre>contents</pre>
 </div>
-<div created="20200628075238156" creator="NeilW" modified="20200717123341981" modifier="NeilW" title="$:/state/showeditpreview">
+<div created="20200628075238156" creator="NeilW" modified="20200717203150798" modifier="NeilW" title="$:/state/showeditpreview">
 <pre>no</pre>
 </div>
 <div created="20200628080653495" creator="NeilW" modified="20200628080656656" modifier="NeilW" title="$:/state/sidebar">
@@ -9956,7 +9971,7 @@ Error message and password prompt
 <div created="20200628073656361" creator="N" modified="20200628073656969" modifier="Neil" title="$:/status/UserName">
 <pre>NeilW</pre>
 </div>
-<div list="[[Bonds Pay For Themselves]] [[UK Employment stats]] [[From Furlough to Full-Employment - Part Deux]] [[From Furlough to Full-Employment]] [[Another Fixed Exchange Rate Inconsistency?]] [[Playing with Hypertext]] [[Robin Hood - MMT Edition]] [[From the Archives: Post-War Banking Policy- Reginald McKenna]] [[Time to Retire Roger]] Welcome" title="$:/StoryList">
+<div list="$:/discoverfeed [[Atom Feed]] [[RSS Feed]] [[Bonds Pay For Themselves]] [[UK Employment stats]] [[From Furlough to Full-Employment - Part Deux]] [[From Furlough to Full-Employment]] [[Another Fixed Exchange Rate Inconsistency?]] [[Playing with Hypertext]] [[Robin Hood - MMT Edition]] [[From the Archives: Post-War Banking Policy- Reginald McKenna]] [[Time to Retire Roger]] Welcome" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200706070436953" creator="NeilW" modified="20200706071214920" modifier="NeilW" title="$:/temp/advancedsearch">
@@ -10146,6 +10161,39 @@ If a move between bonds and currency needs to be discouraged by a floating rate,
 If the Euro is such a great idea across such a wide area, why aren't Eurozone government bonds payable at par on demand at any bank in the Eurozone?
 
 After all they are just unspent savings.  </pre>
+</div>
+<div created="20200717202623418" creator="NeilW" modified="20200717203200271" modifier="NeilW" tags="" title="Atom Feed" type="text/vnd.tiddlywiki">
+<pre>\define MyFilter(MyTag,domain)
+[tag[$(MyTag)$]!sort[created]limit[10]]
+\end
+
+&amp;#60;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;#62;&lt;br /&gt;
+&amp;#60;feed xmlns=&quot;http://www.w3.org/2005/Atom&quot;&amp;#62;&lt;br /&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;#60;title&amp;#62;
+{{$:/SiteTitle}}
+&amp;#60;/title&amp;#62;&lt;br /&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;#60;link href=&quot;{{$:/discoverfeed!!serverdomain}}&quot; /&amp;#62;&lt;br /&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;#60;updated&amp;#62;&lt;$list filter=&quot;[!is[system]get[modified]!prefix[NaN]!sort[]limit[1]]&quot; variable=modified&gt;&lt;$list filter=&quot;[!is[system]modified&lt;modified&gt;]&quot;&gt;&lt;$view field=&quot;modified&quot; format=date template=&quot;[UTC]YYYY-0MM-0DDT0hh:0mm:0ssZ&quot;/&gt;&lt;/$list&gt;&lt;/$list&gt;&amp;#60;/updated&amp;#62;&lt;br /&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;#60;author&amp;#62;&lt;br /&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;#60;name&amp;#62;
+{{$:/status/UserName}}
+&amp;#60;/name&amp;#62;&lt;br /&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;#60;/author&amp;#62;&lt;br /&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;#60;id&amp;#62;{{$:/discoverfeed!!serverdomain}}&amp;#60;/id&amp;#62;&lt;br /&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;#60;link rel=&quot;self&quot; type=&quot;application/atom+xml&quot; href=&quot;{{$:/discoverfeed!!atomfile}}&quot; /&amp;#62;&lt;br /&gt;
+&lt;$set name=&quot;MyTag&quot; value=blog&gt;
+&lt;$set name=&quot;domain&quot; value={{$:/discoverfeed!!serverdomain}}&gt;
+&lt;$list filter=&lt;&lt;MyFilter&gt;&gt;&gt;
+&amp;#60;entry&amp;#62;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;#60;title&amp;#62;
+&lt;$view field=&quot;title&quot;/&gt;
+&amp;#60;/title&amp;#62;&lt;br /&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;#60;link href=&quot;&lt;&lt;domain&gt;&gt;#&lt;$view field=&quot;title&quot; format=&quot;urlencoded&quot;/&gt;&quot;/&amp;#62;&lt;br /&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;#60;id&amp;#62;&lt;&lt;domain&gt;&gt;#&lt;$view field=&quot;title&quot; format=&quot;urlencoded&quot;/&gt;&amp;#60;/id&amp;#62;&lt;br /&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;#60;updated&amp;#62;&lt;$view field=&quot;modified&quot; format=date template=&quot;[UTC]YYYY-0MM-0DDT0hh:0mm:0ssZ&quot;/&gt;&amp;#60;/updated&amp;#62;&lt;br /&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;#60;published&amp;#62;&lt;$view field=&quot;created&quot; format=date template=&quot;[UTC]YYYY-0MM-0DDT0hh:0mm:0ssZ&quot;/&gt;&amp;#60;/published&amp;#62;&lt;br /&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;#60;content&amp;#62;&amp;#60;![CDATA[&lt;$view field=&quot;text&quot; format=htmlwikified/&gt;]]&amp;#62;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;#60;/content&amp;#62;&lt;br /&gt;&amp;#60;/entry&amp;#62;&lt;br /&gt;
+&lt;/$list&gt;&lt;/$set&gt;&lt;/$set&gt;
+&amp;#60;/feed&amp;#62;&lt;br /&gt;</pre>
 </div>
 <div created="20200706074410812" creator="NeilW" modified="20200706075206596" modifier="NeilW" tags="Glossary" title="bankers" type="text/vnd.tiddlywiki">
 <pre>A banker is a pawnbroker with a shinier suit and better PR</pre>
@@ -10398,6 +10446,33 @@ triggering me!&quot;.
 
 [Serf to camera] &quot;What a loser. Oy - leave a sausage on that grill for
 your old man.&quot;
+</pre>
+</div>
+<div created="20200717202347332" creator="NeilW" modified="20200717202547152" modifier="NeilW" tags="" title="RSS Feed" type="text/vnd.tiddlywiki">
+<pre>\define MyFilter(MyTag,domain)
+[tag[$(MyTag)$]!sort[created]limit[10]]
+\end
+&amp;#60;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&amp;#62;&lt;br /&gt;
+&amp;#60;rss version=&quot;2.0&quot;&amp;#62;&lt;br /&gt;
+&amp;#60;channel&amp;#62;&lt;br /&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;#60;title&amp;#62;
+{{$:/SiteTitle}}
+&amp;#60;/title&amp;#62;&lt;br /&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;#60;link&amp;#62;{{$:/discoverfeed!!serverdomain}}&amp;#60;/link&amp;#62;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;#60;description&amp;#62;
+{{$:/SiteSubtitle}}
+&amp;#60;/description&amp;#62;&lt;br /&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;#60;lastBuildDate&amp;#62;&lt;$list filter=&quot;[!is[system]get[modified]!prefix[NaN]!sort[]limit[1]]&quot; variable=modified&gt;&lt;$list filter=&quot;[!is[system]modified&lt;modified&gt;]&quot;&gt;&lt;$view field=&quot;modified&quot; format=date template=&quot;[UTC]ddd, 0DD mmm YYYY 0hh:0mm:0ss GMT&quot;/&gt;&lt;/$list&gt;&lt;/$list&gt;&amp;#60;/lastBuildDate&amp;#62;&lt;br /&gt;
+&lt;$set name=&quot;MyTag&quot; value=blog&gt;
+&lt;$set name=&quot;domain&quot; value={{$:/discoverfeed!!serverdomain}}&gt;
+&lt;$list filter=&lt;&lt;MyFilter&gt;&gt;&gt;
+&amp;#60;item&amp;#62;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;#60;title&amp;#62;
+&lt;$view field=&quot;title&quot;/&gt;
+&amp;#60;/title&amp;#62;&lt;br /&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;#60;link&amp;#62;&lt;&lt;domain&gt;&gt;#&lt;$view field=&quot;title&quot; format=&quot;urlencoded&quot;/&gt;&amp;#60;/link&amp;#62;&lt;br /&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;#60;pubDate&amp;#62;&lt;$view field=&quot;modified&quot; format=date template=&quot;[UTC]ddd, 0DD mmm YYYY 0hh:0mm:0ss GMT&quot;/&gt;&amp;#60;/pubDate&amp;#62;&lt;br /&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;#60;description&amp;#62;&amp;#60;![CDATA[&lt;$view field=&quot;text&quot; format=htmlwikified/&gt;]]&amp;#62;&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;#60;/description&amp;#62;&lt;br /&gt;&amp;#60;/item&amp;#62;&lt;br /&gt;
+&lt;/$list&gt;&lt;/$set&gt;&lt;/$set&gt;
+&amp;#60;/channel&amp;#62;&lt;br /&gt;&amp;#60;/rss&amp;#62;&lt;br /&gt;
 </pre>
 </div>
 <div author="NeilW" created="20200628203742130" creator="NeilW" modified="20200629131352128" modifier="NeilW" tags="blog MMT" title="Time to Retire Roger" type="text/vnd.tiddlywiki">
