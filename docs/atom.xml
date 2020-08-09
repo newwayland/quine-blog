@@ -2,12 +2,21 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
      <title> New Wayland Blog </title>
      <link href="https://new-wayland.com/blog" />
-     <updated>2020-08-08T06:42:33Z</updated>
+     <updated>2020-08-09T08:11:32Z</updated>
      <author>
           <name> NeilW </name>
      </author>
      <id>https://new-wayland.com/blog</id>
      <link rel="self" type="application/atom+xml" href="https://new-wayland.com/blog/atom.xml" />
+<entry>
+     <title> The Indivisibility Issue </title>
+     <link href="https://new-wayland.com/blog#The%20Indivisibility%20Issue"/>
+     <id>https://new-wayland.com/blog#The%20Indivisibility%20Issue</id>
+     <updated>2020-08-09T08:11:32Z</updated>
+     <published>2020-08-09T07:34:09Z</published>
+     <content><![CDATA[<p>One of the most useful, and irritating, things about computer systems is that you have to tell them precisely what to do or they won't do it. No amount of cajoling, persuasion techniques, nudge theory or other New Wave beliefs will fix a Segmentation Fault. You have to be more precise in your instructions to the machine.</p><p>While being excessively precise about limits in the New Wayland <a class="tc-tiddlylink-external" href="http://baseline.model.new-wayland.com" rel="noopener noreferrer" target="_blank">baseline model</a>, I came across something interesting I hadn't really appreciated before. </p><p>Everything on the production side has a minimum unit quantity. Half a car isn't much use. Transactions clear in whole values of the smallest unit of currency. And it takes an amount of time to create something. All of these are necessarily always above zero and even if you subdivide <em>ad absurdum</em> you hit a physical limit (one electron for one atom manipulated in one plank time).</p><p>Wages on the other hand readily hit zero - as we see regularly with intern positions, zero hour contracts, and even ultimately slavery. That again follows logically. You can either have nothing, or you can do something in the expectation that you might get more than nothing in the future. The latter is a better bet - even if it turns out to be a fallacy of composition in the aggregate. </p><p>And all this means is that even with all the &quot;friction&quot; restrictions removed in a model, it will readily drive the wage below the indivisible limits of the production system, and from which it cannot recover by &quot;natural&quot; methods. </p><p>This fits with the view <a class="tc-tiddlylink-external" href="http://neweconomicperspectives.org/2014/01/beyond-euro-left-crisis-alternative.html" rel="noopener noreferrer" target="_blank">put forward</a> by MMT stalwart Warren Mosler </p><blockquote class="tc-quote"><p>People have to work to eat, but businesses only hire when they want to, or when they think they can make a profit. It is not a fair confrontation. And if there isn’t some kind of support for labor, then real wages will be forced down continuously </p></blockquote>]]>
+     </content>
+</entry>
 <entry>
      <title> Why Economists Can't See MMT </title>
      <link href="https://new-wayland.com/blog#Why%20Economists%20Can't%20See%20MMT"/>
@@ -87,15 +96,6 @@
      <updated>2020-07-14T07:26:25Z</updated>
      <published>2020-07-14T07:24:24Z</published>
      <content><![CDATA[<p>The idea is to provide real people with the ability to sell their hours automatically.</p><p>In my current design you are always on the default PAYE scheme, which kicks in as soon as fewer than 35 hours are booked to another PAYE scheme. That drops you onto the &quot;volunteer list&quot; for the unbooked hours doing the &quot;looking for a JG position&quot; job by default (a rather more useful version of the current 35 hours &quot;job seeking&quot; requirement of Universal Credit - looking for jobs that cannot exist in aggregate).</p><p>You can then contact a Work Coach to have yourself taken off that job if you'd prefer not to bother with the process, or to investigate what is on offer and get something lined up. If you don't contact a Work Coach, or they can't easily contact you, then they will suspend payment until you do. Just as would happen if you didn't turn up to work in any other job. I want the process to be automatic, and the registration and verification details submitted in the PAYE Returns by the previous PAYE employer. No forms to fill in.</p><p>Running through the usual use cases I believe this process handles full-time, part-time and temporary, whether they want to be engaged with the Job Guarantee or not.</p><p>Beyond that it's up to you. But you only get paid for hours booked to the Job Guarantee. Since there is a job on offer, you will take it if you are short of money. If you're not short of money and have savings or redundancy then you can take your time. Those with scarce skills higher up the tree will be able to negotiate those protections into their employment contracts - particularly if they unionise.</p><p>How long you can be on the &quot;looking for a JG position&quot; job before you are required to move on I've not really thought about very much (largely because I suspect everybody will want to get off it as soon as possible). I don't believe there is a time limit in Universal Credit, but given the higher level of payment on the Job Guarantee perhaps you will have to put your case to a jury of your peers after a period of time - particularly if you can choose to go on the JG.</p>]]>
-     </content>
-</entry>
-<entry>
-     <title> From Furlough to Full-Employment </title>
-     <link href="https://new-wayland.com/blog#From%20Furlough%20to%20Full-Employment"/>
-     <id>https://new-wayland.com/blog#From%20Furlough%20to%20Full-Employment</id>
-     <updated>2020-07-10T07:41:43Z</updated>
-     <published>2020-07-10T07:34:12Z</published>
-     <content><![CDATA[<p><a class="tc-tiddlylink-external" href="https://www.theguardian.com/uk-news/2020/jul/08/rishi-sunak-unveils-stamp-duty-holiday-and-hospitality-vat-cut-furloughed-coronavirus" rel="noopener noreferrer" target="_blank">Sunak is frustrating</a>. We could move from Furlough to Full Employment tomorrow and solve the whole problem in one shot. </p><p>PAYE needs to capture the bank account details of the employed - along with the hours worked on that PAYE scheme. That is then associated with an NI number and checked to make sure the addresses are UK based and tie up. </p><p>We then top people up at the living wage up to 35 hours per week if they have an NI number that has been paid elsewhere in the last year, but are not currently receiving sufficient money. Essentially we create a default PAYE scheme everybody is enrolled upon paid directly from the Ways and Means Account at the Bank of England. </p><p>If the self-employed want to be part of the scheme they need to run their drawing through PAYE. Giving them that options allows us to phase out and get rid of class 2 and class 4. </p><p>Then anybody who is on the default PAYE scheme is added to the famous &quot;volunteer list&quot; as labour for government to use as it sees fit.</p><p>A reserve army of workers. And the Universal Credit Work Coaches can be tasked with finding them all something to do for their money. </p>]]>
      </content>
 </entry>
 </feed>
